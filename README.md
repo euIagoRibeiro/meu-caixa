@@ -1,4 +1,4 @@
-# Controle Financeiro
+# Meu Caixa
 
 Aplicativo mobile de controle financeiro pessoal, criado como projeto de estudo com foco em simplicidade, organização e evolução gradual.
 

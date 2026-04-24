@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Controle Financeiro",
-    "slug": "cfapp",
+    "name": "Meu Caixa",
+    "slug": "meu-caixa",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
