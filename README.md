@@ -49,16 +49,30 @@ A arquitetura deve permitir evolução futura para:
 
 ## Como rodar
 
+Use Node.js 22, conforme definido no arquivo `.nvmrc`.
+
 Instale as dependências:
 
 ```bash
 npm install
 ```
 
-Inicie o projeto:
+Valide o TypeScript:
+
+```bash
+npm run typecheck
+```
+
+Inicie o projeto no modo padrao:
 
 ```bash
 npm start
+```
+
+Se estiver em uma rede local com restricoes ou se quiser testar pelo computador/emulador, use:
+
+```bash
+npm run start:local
 ```
 
 Depois, use o aplicativo Expo Go no celular ou um emulador para abrir o app.

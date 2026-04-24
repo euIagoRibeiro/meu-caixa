@@ -4,6 +4,8 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start:local": "expo start --offline --port 8081",
+    "typecheck": "tsc --noEmit",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
