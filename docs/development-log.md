@@ -42,46 +42,55 @@ It should be updated after each completed step or important documentation change
 - No database added
 - No visual redesign added
 
+### Step 4 — Basic navigation
+
+- React Navigation added
+- Native stack navigation configured
+- `src/navigation/AppNavigator.tsx` created
+- `TransactionsScreen` created as a simple placeholder screen
+- `App.tsx` updated to render `AppNavigator`
+- Home screen connected to the transactions screen
+- No database added
+- No transaction logic added
+- No complex nested navigation added
+
 ## Documentation Updates
 
 - `docs/project-context.md` created
 - Navigation Strategy section added to `docs/project-context.md`
 - `docs/development-log.md` updated after Step 2
 - `docs/development-log.md` updated after Step 3
+- `docs/development-log.md` updated after Step 4
 
 ## Current State
 
-The project now has a first static visual home screen and a basic folder structure.
+The project now has a first static visual home screen, a basic folder structure, and simple navigation between two screens.
 
 The screen uses example data only and does not persist information yet.
 
-The project is ready for the next small development step after Step 3 is committed.
+The project is ready for the next small development step after Step 4 is committed.
 
 ## Current Pending Changes
 
-- `App.tsx` simplified
-- `src/` folder structure created
-- `HomeScreen` moved to `src/screens/HomeScreen.tsx`
-- `docs/development-log.md` updated after Step 3
+- None after the Step 4 commit
 
 ## Suggested Next Step
 
-### Step 4 — Add basic navigation
+### Step 5 — Create basic data models
 
-The next step should add simple screen navigation.
+The next step should define the first TypeScript data models for the app.
 
 This step should stay small and focused:
 
-- No database
-- No complex nested navigation
-- No feature logic
+- No database implementation
+- No form implementation
+- No persistence logic
 - No visual redesign
 
-The goal is to prepare the app to move between screens in a clear and beginner-friendly way.
+The goal is to describe the shape of the main financial data before storing or editing it.
 
 ## Future Planned Steps
 
-- Step 4: Basic navigation
 - Step 5: Data models
 - Step 6: Local storage
 - Step 7: Transaction form

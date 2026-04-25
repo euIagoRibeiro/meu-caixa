@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+import type { RootStackParamList } from '../navigation/AppNavigator';
 
 const summaryItems = [
   { label: 'Entradas', value: 'R$ 4.250,00', tone: 'positive' },
@@ -13,7 +17,9 @@ const recentItems = [
   { title: 'Reserva mensal', category: 'Dinheiro guardado', value: '- R$ 500,00' },
 ] as const;
 
-export function HomeScreen() {
+type HomeScreenProps = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+export function HomeScreen({ navigation }: HomeScreenProps) {
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style="dark" />
@@ -30,6 +36,14 @@ export function HomeScreen() {
           <Text style={styles.balanceValue}>R$ 2.070,00</Text>
           <Text style={styles.cardHint}>Resumo visual com dados de exemplo</Text>
         </View>
+
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => navigation.navigate('Transactions')}
+          style={({ pressed }) => [styles.primaryButton, pressed && styles.primaryButtonPressed]}
+        >
+          <Text style={styles.primaryButtonText}>Ver registros</Text>
+        </Pressable>
 
         <View style={styles.summaryGrid}>
           {summaryItems.map((item) => (
@@ -104,6 +118,21 @@ const styles = StyleSheet.create({
     color: '#A7F3D0',
     fontSize: 13,
     marginTop: 12,
+  },
+  primaryButton: {
+    alignItems: 'center',
+    backgroundColor: '#047857',
+    borderRadius: 8,
+    marginBottom: 16,
+    padding: 16,
+  },
+  primaryButtonPressed: {
+    opacity: 0.85,
+  },
+  primaryButtonText: {
+    color: '#FFFFFF',
+    fontSize: 15,
+    fontWeight: '700',
   },
   summaryGrid: {
     gap: 12,
