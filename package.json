@@ -6,7 +6,7 @@
     "start": "expo start",
     "start:local": "expo start --offline --port 8081",
     "typecheck": "tsc --noEmit",
-    "android": "expo start --android",
+    "android": "expo start --android --port 8081",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
