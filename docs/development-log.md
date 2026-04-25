@@ -27,43 +27,60 @@ It should be updated after each completed step or important documentation change
 - No database added
 - No financial logic added
 
+### Step 3 — Basic folder structure
+
+- `src/` folder created
+- `src/screens/` created for app screens
+- `src/components/` created for reusable UI components
+- `src/services/` created for app logic outside the UI
+- `src/storage/` created for future local persistence logic
+- `src/models/` created for future TypeScript models
+- `src/utils/` created for future helper functions
+- Home screen moved to `src/screens/HomeScreen.tsx`
+- `App.tsx` simplified to render `HomeScreen`
+- No navigation added
+- No database added
+- No visual redesign added
+
 ## Documentation Updates
 
 - `docs/project-context.md` created
 - Navigation Strategy section added to `docs/project-context.md`
 - `docs/development-log.md` updated after Step 2
+- `docs/development-log.md` updated after Step 3
 
 ## Current State
 
-The project now has a first static visual home screen.
+The project now has a first static visual home screen and a basic folder structure.
 
 The screen uses example data only and does not persist information yet.
 
-The project is ready for the next small development step after Step 2 is committed.
+The project is ready for the next small development step after Step 3 is committed.
 
 ## Current Pending Changes
 
-- `App.tsx` updated with the first static home screen
-- `docs/development-log.md` updated after Step 2
+- `App.tsx` simplified
+- `src/` folder structure created
+- `HomeScreen` moved to `src/screens/HomeScreen.tsx`
+- `docs/development-log.md` updated after Step 3
 
 ## Suggested Next Step
 
-### Step 3 — Create the basic folder structure
+### Step 4 — Add basic navigation
 
-The next step should organize the project with a simple folder structure.
+The next step should add simple screen navigation.
 
 This step should stay small and focused:
 
 - No database
-- No navigation changes
+- No complex nested navigation
 - No feature logic
 - No visual redesign
 
-The goal is to prepare the project for future screens, components, models, services, and storage code.
+The goal is to prepare the app to move between screens in a clear and beginner-friendly way.
 
 ## Future Planned Steps
 
-- Step 3: Basic folder structure
 - Step 4: Basic navigation
 - Step 5: Data models
 - Step 6: Local storage
