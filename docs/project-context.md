@@ -316,6 +316,47 @@ emulator -avd Pixel_7
 
 If the emulator is already open, running `npm run android` should be enough.
 
+If the emulator becomes unstable or crashes because of graphics issues, start it with software rendering:
+
+```bash
+emulator -avd Pixel_7 -no-snapshot-load -gpu swiftshader_indirect
+```
+
+This is slower than hardware rendering, but it is more stable on the current local machine.
+
+## Current Implementation State
+
+The app currently has:
+
+- A static home screen
+- A basic project folder structure under `src/`
+- React Navigation configured with a native stack
+- Two screens:
+  - `HomeScreen`
+  - `TransactionsScreen`
+
+The app does not have real financial data yet.
+
+The current data shown on the home screen is only example data.
+
+## Dependency And Security Notes
+
+The project uses Expo SDK 54.
+
+`npm audit` reported moderate vulnerabilities in transitive Expo tooling dependencies.
+
+A safe override was added for `postcss`:
+
+```json
+"overrides": {
+  "postcss": "8.5.10"
+}
+```
+
+Remaining audit warnings are related to `uuid` through `xcode`, which is used by Expo tooling.
+
+Do not run `npm audit fix --force` without reviewing the result, because npm may suggest downgrading Expo to an older major version.
+
 ## How To Continue In Future Chats
 
 At the beginning of a new chat, read this file before making project decisions.
