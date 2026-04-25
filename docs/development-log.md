@@ -17,42 +17,52 @@ It should be updated after each completed step or important documentation change
 - TypeScript check passed
 - Project runs with `npm run android`
 
+### Step 2 — First static home screen
+
+- Default Expo starter screen replaced
+- Static home screen created for Meu Caixa
+- Example financial summary added
+- Example recent records added
+- No navigation added
+- No database added
+- No financial logic added
+
 ## Documentation Updates
 
 - `docs/project-context.md` created
 - Navigation Strategy section added to `docs/project-context.md`
+- `docs/development-log.md` updated after Step 2
 
 ## Current State
 
-The project is currently in the initial setup stage.
+The project now has a first static visual home screen.
 
-The app still uses the default Expo starter screen.
+The screen uses example data only and does not persist information yet.
 
-The project is ready for the next small development step after the current documentation changes are committed.
+The project is ready for the next small development step after Step 2 is committed.
 
 ## Current Pending Changes
 
-- `docs/project-context.md` updated
-- `docs/development-log.md` being created
+- `App.tsx` updated with the first static home screen
+- `docs/development-log.md` updated after Step 2
 
 ## Suggested Next Step
 
-### Step 2 — Create the first visual home screen
+### Step 3 — Create the basic folder structure
 
-The next step should create the first simple visual home screen for the app.
+The next step should organize the project with a simple folder structure.
 
 This step should stay small and focused:
 
-- No navigation
 - No database
-- No financial logic
-- No forms
+- No navigation changes
+- No feature logic
+- No visual redesign
 
-The goal is only to replace the default Expo starter screen with a clean first screen for Meu Caixa.
+The goal is to prepare the project for future screens, components, models, services, and storage code.
 
 ## Future Planned Steps
 
-- Step 2: First static home screen
 - Step 3: Basic folder structure
 - Step 4: Basic navigation
 - Step 5: Data models
